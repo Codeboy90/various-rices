@@ -1,0 +1,114 @@
+
+element {
+    padding:     1px ;
+    orientation: horizontal;
+    cursor:      pointer;
+    spacing:     5px ;
+    border:      0;
+    children:    [ "element-text","element-icon" ];
+}
+
+element-text {
+    background-color: transparent;
+    cursor:           inherit;
+    highlight:        inherit;
+    text-color:       inherit;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             1.5em ;
+    cursor:           inherit;
+    text-color:       inherit;
+}
+
+window {
+    padding:          5;
+    background-color: #050411;
+    border-color:     #ffaaff;
+    border:           5;
+}
+
+mainbox {
+    padding: 0;
+    border:  0;
+}
+message {
+    padding:      1px ;
+    border-color: var(separatorcolor);
+    border:       2px dash 0px 0px ;
+}
+textbox {
+    text-color: white;
+}
+
+listview {
+    padding:      2px 0px 0px ;
+    scrollbar:    true;
+    border-color: var(separatorcolor);
+    spacing:      2px ;
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+}
+scrollbar {
+    width:        4px ;
+    padding:      0;
+    handle-width: 8px ;
+    border:       0;
+    handle-color: #a9ffff;
+}
+sidebar {
+    border-color: var(separatorcolor);
+    border:       2px dash 0px 0px ;
+}
+button {
+    cursor:     pointer;
+    spacing:    0;
+    text-color: white;
+}
+button selected {
+    background-color: #ffaaff;
+    text-color:       white;
+}
+num-filtered-rows {
+    expand:     false;
+    text-color: #a9ffff;
+}
+num-rows {
+    expand:     false;
+    text-color: #a9ffff;
+}
+textbox-num-sep {
+    expand:     false;
+    str:        "/";
+    text-color: #ffaaff;
+}
+inputbar {
+    padding:    1px ;
+    spacing:    0px ;
+    text-color: #2098af;
+    children:   [ "prompt","textbox-prompt-colon","entry","num-filtered-rows","textbox-num-sep","num-rows","case-indicator" ];
+}
+case-indicator {
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+entry {
+    text-color:        white;
+    cursor:            text;
+    spacing:           0;
+    placeholder-color: #a9ffff;
+    placeholder:       "write here";
+}
+prompt {
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+textbox-prompt-colon {
+    margin:     0px 0.3000em 0.0000em 0.0000em ;
+    expand:     false;
+    str:        ":";
+    text-color: inherit;
+}
+
