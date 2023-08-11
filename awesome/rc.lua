@@ -644,3 +644,11 @@ awful.spawn.with_shell ("flameshot")
 -- awful.spawn.with_shell ("picom")
 awful.spawn.with_shell ("kdeconnect-indicator")
 
+local gshape = require("gears.shape")
+local function rounded_shape(cr, w, h)
+    gshape.rounded_rect(cr, w, h, 10)
+end
+
+client.connect_signal("manage", function(c)
+    c.shape = rounded_shape
+end)
