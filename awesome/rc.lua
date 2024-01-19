@@ -111,7 +111,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock('%F %H:%M:%S', 1)
+mytextclock = wibox.widget.textclock('🗓️ %a %d %m %Y ⏳️ %H %M %S', 1)
 beautiful.wibar_height = (30)
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -640,9 +640,12 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-awful.spawn.with_shell ("flameshot")
+-- Autostart applications
 -- awful.spawn.with_shell ("picom")
-awful.spawn.with_shell ("kdeconnect-indicator")
+awful.util.spawn ("flameshot")
+awful.util.spawn ("kdeconnect-indicator")
+awful.util.spawn ("nm-applet")
+awful.spawn.with_shell ("setxkbmap fr,ara")
 
 local gshape = require("gears.shape")
 local function rounded_shape(cr, w, h)
