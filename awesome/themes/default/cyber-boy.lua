@@ -11,23 +11,23 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "JetBrainsMono Nerd Font 12"
+theme.font          = "JetBrainsMono 15"
 theme.bg_normal     = "#26243999"
 theme.bg_focus      = "#39effc99"
 theme.bg_urgent     = "#26243999"
-theme.bg_minimize   = "#c2709899"
+theme.bg_minimize   = "#26243999"
 theme.bg_systray    = "#26243999"
 
 theme.fg_normal     = "#ffffff"
-theme.fg_focus      = "#0d0c13"
-theme.fg_urgent     = "#0d0c13"
+theme.fg_focus      = "#f29341"
+theme.fg_urgent     = "#f29341"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(5)
 theme.border_width  = dpi(5)
-theme.border_normal = "#c57a1a"
+theme.border_normal = "#597492"
 theme.border_focus  = "#39effc"
-theme.border_marked = "#c57a1a"
+theme.border_marked = "#597492"
 
 -- There are other variable sets
 -- overriding the default one when
@@ -40,12 +40,18 @@ theme.border_marked = "#c57a1a"
 -- prompt_[fg|bg|fg_cursor|bg_cursor|font]
 -- hotkeys_[bg|fg|border_width|border_color|shape|opacity|modifiers_fg|label_bg|label_fg|group_margin|font|description_font]
 -- Example:
-theme.taglist_bg_focus = "#c2709899"
+theme.taglist_bg_focus = "#39effc99"
+theme.taglist_bg_occupied = "#c2709899"
+theme.hotkeys_border_color = "#597492"
+theme.hotkeys_modifiers_fg = "#f29341"
+theme.hotkeys_modifiers_font = "JetBrainsMono 15"
+theme.description_font = "JetBrainsMono 15"
+theme.label_font = "JetBrainsMono 15"
 
 -- Generate taglist squares:
 local taglist_square_size = dpi(7)
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
-    taglist_square_size, theme.fg_normal
+    taglist_square_size, theme.fg_focus
 )
 theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
     taglist_square_size, theme.fg_normal
@@ -57,6 +63,7 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- notification_[width|height|margin]
 -- notification_[border_color|border_width|shape|opacity]
 notification_border_color = "#39effc"
+notification_font = "JetBrainsMono 15"
 notification_border_width = dpi(10)
 
 -- Variables set for theming the menu:
@@ -65,6 +72,7 @@ notification_border_width = dpi(10)
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
 theme.menu_height = dpi(30)
 theme.menu_width = dpi(150)
+theme.menu_border_color = "#597492"
 
 -- You can add as many variables as
 -- you wish and access them by using
