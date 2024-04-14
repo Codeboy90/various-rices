@@ -11,16 +11,16 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "JetBrainsMono Nerd Font 12"
+theme.font          = "FreeSans Semi-Bold 15"
 theme.bg_normal     = "#0e233899"
 theme.bg_focus      = "#25528d99"
 theme.bg_urgent     = "#0e233899"
 theme.bg_minimize   = "#0e233899"
 theme.bg_systray    = "#0e233899"
 
-theme.fg_normal     = "#e7eaf1"
-theme.fg_focus      = "#e7eaf1"
-theme.fg_urgent     = "#e7eaf1"
+theme.fg_normal     = "#ffffff"
+theme.fg_focus      = "#ffffff"
+theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(5)
@@ -44,6 +44,8 @@ theme.taglist_bg_focus = "#4f256799"
 theme.taglist_bg_occupied = "#25528d99"
 theme.hotkeys_border_color = "#25528d"
 theme.hotkeys_modifiers_fg = "#ca5879"
+theme.hotkeys_modifiers = "FreeSans Semi-Bold 15"
+theme.description_font = "FreeSans Semi-Bold 15"
 
 
 
@@ -62,6 +64,7 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- notification_[width|height|margin]
 -- notification_[border_color|border_width|shape|opacity]
 notification_border_color = "#25528d"
+notification_font = "FreeSans Semi-Bold 15"
 notification_border_width = dpi(8)
 
 -- Variables set for theming the menu:
