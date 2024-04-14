@@ -1,5 +1,5 @@
 ---------------------------
--- landscape-trees-mountains --
+-- landscape-trees-mountains-clouds --
 ---------------------------
 
 local theme_assets = require("beautiful.theme_assets")
@@ -11,7 +11,7 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "JetBrainsMono Nerd Font 12"
+theme.font          = "JetBrainsMono 15"
 theme.bg_normal     = "#181a3199"
 theme.bg_focus      = "#c37e6299"
 theme.bg_urgent     = "#181a3199"
@@ -19,7 +19,7 @@ theme.bg_minimize   = "#181a3199"
 theme.bg_systray    = "#181a3199"
 
 theme.fg_normal     = "#ffffff"
-theme.fg_focus      = "#000000"
+theme.fg_focus      = "#1fa3b6"
 theme.fg_urgent     = "#1fa3b6"
 theme.fg_minimize   = "#ffffff"
 
@@ -44,7 +44,9 @@ theme.taglist_bg_focus = "#c37e6299"
 theme.taglist_bg_occupied = "#bc525299"
 theme.hotkeys_border_color = "#1fa3b6"
 theme.hotkeys_modifiers_fg = "#1fa3b6"
-
+theme.hotkeys_modifiers_font = "JetBrainsMono 15"
+theme.description_font = "JetBrainsMono 15"
+theme.label_font = "JetBrainsMono 15"
 
 
 -- Generate taglist squares:
@@ -62,14 +64,15 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- notification_[width|height|margin]
 -- notification_[border_color|border_width|shape|opacity]
 notification_border_color = "#1fa3b6"
-notification_border_width = dpi(8)
+notification_font = "JetBrainsMono 15"
+notification_border_width = dpi(10)
 
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
-theme.menu_height = dpi(15)
-theme.menu_width = dpi(100)
+theme.menu_height = dpi(30)
+theme.menu_width = dpi(150)
 theme.menu_border_color = "#1fa3b6"
 
 
